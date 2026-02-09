@@ -8,8 +8,7 @@ const Register = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    password: "",
-    role: "user"
+    password: ""
   });
 
   const [loading, setLoading] = useState(false);
@@ -71,7 +70,7 @@ const Register = () => {
           </div>
 
           {/* Password */}
-          <div className="mb-3">
+          <div className="mb-4">
             <label className="form-label">Password</label>
             <input
               type="password"
@@ -84,21 +83,6 @@ const Register = () => {
               minLength={6}
               required
             />
-          </div>
-
-          {/* Role */}
-          <div className="mb-4">
-            <label className="form-label">Role</label>
-            <select
-              className="form-select"
-              value={form.role}
-              onChange={(e) =>
-                setForm({ ...form, role: e.target.value })
-              }
-            >
-              <option value="user">User</option>
-              <option value="admin">Admin</option>
-            </select>
           </div>
 
           {/* Submit */}
